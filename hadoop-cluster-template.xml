@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cluster>
+
+  <workspace>
+    <name>master-node</name>
+    <image>ubuntujaunty-hadoop-ctx-pub_v8.gz</image>
+    <quantity>1</quantity>
+    <nic wantlogin="true">public</nic>
+    
+    <ctx>
+      <provides>
+          <identity />
+          <role>hadoopmaster</role>
+      </provides>
+      
+      <requires>
+          <identity />
+          <role name="hadoopslave" />
+      </requires>
+      
+    </ctx>
+  </workspace>
+  
+  <workspace>
+  
+    <name>slave-nodes</name>
+    <image>ubuntujaunty-hadoop-ctx-pub_v8.gz</image>
+    <quantity>NumberOfNodes</quantity>
+    <nic wantlogin="true">public</nic>
+    
+    <ctx>
+      <provides>
+          <identity />
+          <role>hadoopslave</role>
+      </provides>
+      
+      <requires>
+          <identity />
+          <role name="hadoopmaster" />
+      </requires>
+    </ctx>
+  </workspace>
+  
+</cluster>

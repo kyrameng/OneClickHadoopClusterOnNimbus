@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cluster>
+
+  <workspace>
+    <name>newly-added-slave-nodes</name>
+    <image>ubuntujaunty-hadoop-ctx-pub_v8.gz</image>
+    <quantity>NumberOfNodes</quantity>
+    <nic wantlogin="true">public</nic>
+    <ctx>
+	<provides>
+	</provides>
+	<requires>
+	<data name="add_node">
+MASTERIP
+
+	</data>
+	</requires>
+    </ctx>
+  </workspace>
+  
+  
+</cluster>
