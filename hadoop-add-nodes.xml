@@ -4,7 +4,7 @@
 
   <workspace>
     <name>newly-added-slave-nodes</name>
-    <image>ubuntujaunty-hadoop-ctx-pub_v8.gz</image>
+    <image>hadoop.gz</image>
     <quantity>NumberOfNodes</quantity>
     <nic wantlogin="true">public</nic>
     <ctx>
